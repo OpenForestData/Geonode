@@ -8199,7 +8199,7 @@ article.tab-pane {
 .navbar-nav .search input {
     width: 194px;
     height: 30px;
-    border: 1px solid #333333;
+    border: 1px solid #019544;
     border-radius: 50px;
     outline-width: 0;
     text-indent: 32px;
@@ -8298,14 +8298,19 @@ article.tab-pane {
 .home .big-search {
     background: #F6F4F2;
     color: white;
-    padding-bottom: 3em;
+    padding-bottom: 1em;
     padding-top: 1em;
     height: 278px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .home .big-search h1,
 .home .big-search p {
     text-align: center;
+    color: #2A2B2C;
+    font-size: 22px;
 }
 
 .home .big-search a {
@@ -8326,7 +8331,7 @@ article.tab-pane {
     width: 100%;
     min-width: 727px;
     height: 56px;
-    border: 1px solid #019544;
+    border: 2px solid #019544;
     border-radius: 50px;
     outline-width: 0;
     font-size: 1.5em;
@@ -8345,7 +8350,8 @@ article.tab-pane {
 .home .big-search .btn-default {
     background: transparent;
     border: none;
-    color: #ff8f31;
+    color: #2A2B2C;
+    margin-left: 720px;
 }
 
 .home .big-search .btn-default:hover {
@@ -9423,7 +9429,8 @@ footer form {
         overflow: hidden !important;
     }
     .home .navbar-inverse {
-        background-color: #333333;
+        background-color: white;
+        border-bottom: solid 10px #F6F4F2;
     }
     .navbar-inverse .navbar-nav>li>a {
         padding-bottom: 0.75em;

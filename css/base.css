@@ -8300,6 +8300,7 @@ article.tab-pane {
     color: white;
     padding-bottom: 3em;
     padding-top: 1em;
+    height: 278px;
 }
 
 .home .big-search h1,
@@ -8325,7 +8326,7 @@ article.tab-pane {
     width: 100%;
     min-width: 727px;
     height: 56px;
-    border: 1px solid #333333;
+    border: 1px solid #019544;
     border-radius: 50px;
     outline-width: 0;
     font-size: 1.5em;

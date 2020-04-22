@@ -9,7 +9,7 @@
 
 @import "../css/font-awesome.min.css";
 html {
-    font-family: sans-serif;
+    font-family: 'Prompt';
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
@@ -8338,12 +8338,12 @@ article.tab-pane {
 }
 
 .home .big-search .search input {
-    text-indent: 64px;
+    text-indent: 20px;
 }
 
 .home .big-search .search .fa-search {
     position: absolute;
-    top: 3px;
+    top: 666px;
     left: 15px;
 }
 
@@ -9114,16 +9114,17 @@ nav.filter li a {
 ----------------------- */
 
 footer {
-    color: white;
+    color: black;
+    background: white;
     padding: 1.5em;
 }
 
 footer a {
-    color: #ff8f31;
+    color: #019544;
 }
 
 footer a:hover {
-    color: #eb6b00;
+    color: #019544;
 }
 
 footer form {
@@ -9716,4 +9717,8 @@ form-inline {
     background-image: none;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.flex {
+    display: flex;
 }

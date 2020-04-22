@@ -64,10 +64,10 @@
       <section id="showcase">
         <div class="row">
           <div class="container text-center">
-            <div class="row home-facets">
+            <div class="row home-facets flex">
             {% with facet_type='home' %}
              {% facets as facets %}
-              <div class="col-md-6">
+              <div class="">
                 <p><a href="{% url "layer_browse" %}"><i class="fa fa-square-o fa-4x rotate-45"></i></a></p>
                 <h2><a href="{% url "layer_browse" %}">{{ facets.layer|default:_("No") }} {% blocktrans count counter=facets.layer %}Layer{% plural %}Layers{% endblocktrans %}</a></h2>
                 <p>{% trans "Click to search for geospatial data published by other users, organizations and public sources. Download data in standard formats." %}</p>
@@ -77,7 +77,7 @@
                 <p class="text-center"><a class="btn btn-default" href="{% url "layer_browse" %}" role="button">{% trans "Explore layers" %} &raquo;</a></p>
                 {% endif %}
               </div>
-              <div class="col-md-6">
+              <div class="">
                 <p><a href="{% url "maps_browse" %}"><i class="fa fa-map-marker fa-4x"></i></a></p>
                 <h2><a href="{% url "maps_browse" %}">{{ facets.map|default:_("No") }} {% blocktrans count counter=facets.map %}Map{% plural %}Maps{% endblocktrans %}</a></h2>
                 <p>{% trans "Data is available for browsing, aggregating and styling to generate maps which can be saved, downloaded, shared publicly or restricted to specify users only." %}</p>
@@ -87,7 +87,7 @@
                 <p><a class="btn btn-default" href="{% url "maps_browse" %}" role="button">{% trans "Explore maps" %} &raquo;</a></p>
                 {% endif %}
               </div>
-              <div class="col-md-6">
+              <div class="">
                 <p><a href="{% url "document_browse" %}"><i class="fa fa-newspaper-o fa-4x"></i></a></p>
                 <h2><a href="{% url "document_browse" %}">{{ facets.document|default:_("No") }} {% blocktrans count counter=facets.document %}Document{% plural %}Documents{% endblocktrans %}</a></h2>
                 <p>{% trans "As for the layers and maps GeoNode allows to publish tabular and text data, manage theirs metadata and associated documents." %}</p>
@@ -97,7 +97,7 @@
                 <p class="text-center"><a class="btn btn-default" href="{% url "document_browse" %}" role="button">{% trans "Explore documents" %} &raquo;</a></p>
                 {% endif %}
               </div>
-              <div class="col-md-6">
+              <div class="">
                 <p><a href="{% url "profile_browse" %}"><i class="fa fa-user fa-4x"></i></a></p>
                 <h2><a href="{% url "profile_browse" %}">{{ facets.user|default:_("No") }} {% blocktrans count counter=facets.user %}User{% plural %}Users{% endblocktrans %}</a></h2>
                 <p>{% trans "Geonode allows registered users to easily upload geospatial data and various documents in several formats." %}</p>
@@ -110,7 +110,7 @@
       </section>
 	  {% endblock showcase %}
 
-      {% block datasets %}
+      {% comment %} {% block datasets %}
       <section id="datasets">
       	<div class="container">
       		<div class="row">
@@ -315,7 +315,7 @@
 			</div>
 		  </div>
       </section>
-      {% endblock datasets %}
+      {% endblock datasets %} {% endcomment %}
 
       {% block partners %}
         {% if custom_theme.partners.all %}

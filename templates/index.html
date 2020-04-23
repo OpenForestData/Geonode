@@ -110,7 +110,7 @@
       </section>
 	  {% endblock showcase %}
 
-      {% comment %} {% block datasets %}
+      {% block datasets %}
       <section id="datasets">
       	<div class="container">
       		<div class="row">
@@ -315,7 +315,7 @@
 			</div>
 		  </div>
       </section>
-      {% endblock datasets %} {% endcomment %}
+      {% endblock datasets %}
 
       {% block partners %}
         {% if custom_theme.partners.all %}

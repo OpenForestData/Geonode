@@ -6,6 +6,20 @@
                                                         /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
                                                         
                                                         @import "../css/font-awesome.min.css";
+                                                        @font-face {
+                                                            font-family: 'Prompt';
+                                                            font-style: normal;
+                                                            font-weight: 400;
+                                                            src: url('../fonts/prompt-v4-latin-ext_latin-regular.eot');
+                                                            /* IE9 Compat Modes */
+                                                            src: local('Prompt'), local('Prompt-Regular'), url('../fonts/prompt-v4-latin-ext_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                                                            url('../fonts/prompt-v4-latin-ext_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+                                                            url('../fonts/prompt-v4-latin-ext_latin-regular.woff') format('woff'), /* Modern Browsers */
+                                                            url('../fonts/prompt-v4-latin-ext_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+                                                            url('../fonts/prompt-v4-latin-ext_latin-regular.svg#Prompt') format('svg');
+                                                            /* Legacy iOS */
+                                                        }
+                                                        
                                                         html {
                                                             font-family: 'Prompt';
                                                             -ms-text-size-adjust: 100%;
@@ -1972,13 +1986,15 @@
                                                         .container {
                                                             padding-right: 15px;
                                                             padding-left: 15px;
-                                                            margin-right: auto;
-                                                            margin-left: auto;
+                                                            margin-right: 0;
+                                                            margin-left: 0;
                                                         }
                                                         
                                                         @media (min-width: 768px) {
                                                             .container {
                                                                 width: 750px;
+                                                                margin-right: auto;
+                                                                margin-left: auto;
                                                             }
                                                             .home-facets {
                                                                 display: flex;
@@ -1996,11 +2012,31 @@
                                                             .shrink-eu {
                                                                 width: 470px;
                                                             }
+                                                            .footer::after {
+                                                                visibility: hidden;
+                                                            }
+                                                            .equal-height-buttons {
+                                                                position: relative;
+                                                                left: 0;
+                                                                right: 0;
+                                                                margin-left: auto;
+                                                                margin-right: auto;
+                                                            }
+                                                            .home .big-search .search {
+                                                                left: 0;
+                                                                position: relative;
+                                                                color: #444;
+                                                                top: 20px;
+                                                                padding-bottom: 2em;
+                                                                width: 110%;
+                                                            }
                                                         }
                                                         
                                                         @media (min-width: 992px) {
                                                             .container {
                                                                 width: 970px;
+                                                                margin-right: auto;
+                                                                margin-left: auto;
                                                             }
                                                             .home-facets {
                                                                 display: flex;
@@ -2018,11 +2054,23 @@
                                                             .shrink-eu {
                                                                 width: 480px;
                                                             }
+                                                            .footer::after {
+                                                                visibility: hidden;
+                                                            }
+                                                            .equal-height-buttons {
+                                                                position: relative;
+                                                                left: 0;
+                                                                right: 0;
+                                                                margin-left: auto;
+                                                                margin-right: auto;
+                                                            }
                                                         }
                                                         
                                                         @media (min-width: 1200px) {
                                                             .container {
                                                                 width: 1170px;
+                                                                margin-right: auto;
+                                                                margin-left: auto;
                                                             }
                                                             .home-facets {
                                                                 display: flex;
@@ -2039,6 +2087,16 @@
                                                             }
                                                             .shrink-eu {
                                                                 width: 627px;
+                                                            }
+                                                            .footer::after {
+                                                                visibility: hidden;
+                                                            }
+                                                            .equal-height-buttons {
+                                                                position: absolute;
+                                                                left: 0;
+                                                                right: 0;
+                                                                margin-left: auto;
+                                                                margin-right: auto;
                                                             }
                                                         }
                                                         
@@ -3769,6 +3827,7 @@
                                                             color: #333;
                                                             background-color: #fff;
                                                             border-color: #ccc;
+                                                            border-radius: 50px;
                                                         }
                                                         
                                                         .btn-default:focus,
@@ -3827,21 +3886,22 @@
                                                         
                                                         .btn-primary {
                                                             color: #fff;
-                                                            background-color: #2c689c;
-                                                            border-color: #265a88;
+                                                            background-color: #019544;
+                                                            border-color: #019544;
+                                                            border-radius: 50px;
                                                         }
                                                         
                                                         .btn-primary:focus,
                                                         .btn-primary.focus {
                                                             color: #fff;
-                                                            background-color: #204d74;
-                                                            border-color: #0a1824;
+                                                            background-color: #019544;
+                                                            border-color: #019544;
                                                         }
                                                         
                                                         .btn-primary:hover {
                                                             color: #fff;
-                                                            background-color: #204d74;
-                                                            border-color: #193b58;
+                                                            background-color: #019544;
+                                                            border-color: #019544;
                                                         }
                                                         
                                                         .btn-primary:active,
@@ -5486,6 +5546,13 @@
                                                             .shrink-eu {
                                                                 width: 400px;
                                                             }
+                                                            .equal-height-buttons {
+                                                                position: relative;
+                                                                left: 0;
+                                                                right: 0;
+                                                                margin-left: auto;
+                                                                margin-right: auto;
+                                                            }
                                                         }
                                                         
                                                         .navbar-default .navbar-toggle {
@@ -5691,7 +5758,7 @@
                                                             padding: 6px 12px;
                                                             margin-left: -1px;
                                                             line-height: 1.42857143;
-                                                            color: #019544;
+                                                            color: black;
                                                             text-decoration: none;
                                                             background-color: #fff;
                                                             /* border: 1px solid #ddd; Old */
@@ -6547,10 +6614,10 @@
                                                             margin-bottom: 22px;
                                                             background-color: #fff;
                                                             /* border: 1px solid transparent; Old */
-                                                            border: none;
+                                                            border: transparent;
                                                             border-radius: 4px;
-                                                            -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-                                                            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+                                                            -webkit-box-shadow: 0 0 0 transparent;
+                                                            box-shadow: 0 0 0 transparent;
                                                         }
                                                         
                                                         .panel-body {
@@ -6827,7 +6894,7 @@
                                                         .panel-default>.panel-heading {
                                                             color: #333333;
                                                             /* background-color: #f5f5f5; */
-                                                            background-color: none;
+                                                            background-color: transparent;
                                                             border-color: #ddd;
                                                             font-weight: 700;
                                                         }
@@ -8087,7 +8154,7 @@
                                                         div#user_messages {
                                                             position: absolute;
                                                             width: 500px;
-                                                            bottom: 20px;
+                                                            bottom: 0px;
                                                             left: 40px;
                                                             z-index: 9999;
                                                             -moz-animation: msgDisappear 0s ease-in 5s forwards;
@@ -8127,7 +8194,7 @@
                                                         }
                                                         
                                                         a {
-                                                            color: #2c689c;
+                                                            color: black;
                                                         }
                                                         
                                                         h1,
@@ -8175,7 +8242,7 @@
                                                         #wrap {
                                                             background: #fff;
                                                             padding-bottom: 40px;
-                                                            padding-top: 10px;
+                                                            padding-top: 25px;
                                                             width: 100%;
                                                         }
                                                         
@@ -8199,6 +8266,7 @@
                                                             overflow: hidden;
                                                             text-overflow: ellipsis;
                                                             white-space: nowrap;
+                                                            font-size: 24px;
                                                         }
                                                         /* ------ Nav
 ------------------------------ */
@@ -8235,8 +8303,8 @@
                                                         }
                                                         
                                                         .navbar-nav .dropdown-menu li a:hover {
-                                                            background-color: lightgrey;
-                                                            color: black;
+                                                            background-color: #019544;
+                                                            color: white;
                                                         }
                                                         
                                                         .navbar-nav .dropdown-menu .divider {
@@ -8527,12 +8595,12 @@
                                                         }
                                                         
                                                         .home-facets a {
-                                                            color: black;
+                                                            color: #019544;
                                                             width: 203px;
                                                         }
                                                         
                                                         .home-facets a:hover {
-                                                            color: #2c689c;
+                                                            color: #019544;
                                                             text-decoration: none;
                                                         }
                                                         
@@ -9474,6 +9542,17 @@
                                                             .navbar-inverse .navbar-nav .search input {
                                                                 width: 100%;
                                                             }
+                                                            .home .big-search .search {
+                                                                left: 0;
+                                                                position: relative;
+                                                                color: #444;
+                                                                top: 20px;
+                                                                padding-bottom: 2em;
+                                                                width: 110%;
+                                                            }
+                                                            .shrink-eu {
+                                                                width: 350px;
+                                                            }
                                                         }
                                                         
                                                         #member_form_container .select2-container {
@@ -9551,7 +9630,7 @@
                                                             white-space: nowrap;
                                                             padding: 4px 8px;
                                                             line-height: 1.42857143;
-                                                            border-radius: 4px;
+                                                            border-radius: 50px;
                                                             -webkit-user-select: none;
                                                             -moz-user-select: none;
                                                             -ms-user-select: none;
@@ -9808,9 +9887,7 @@
                                                         }
                                                         
                                                         .footer-whiteaster {
-                                                            margin-bottom: 10px;
-                                                            margin-top: 3px;
-                                                            height: 31px;
+                                                            height: 33px;
                                                         }
                                                         
                                                         .flex-space-between {
@@ -9827,12 +9904,7 @@
                                                         
                                                         .white-border {
                                                             border: 7px solid white;
-                                                            /* Old statics */
-                                                            width: 88%;
-                                                            height: 84%;
-                                                            /* width: 250px; */
-                                                            /* height: 250px; */
-                                                            margin: 5px;
+                                                            width: 100%;
                                                         }
                                                         
                                                         .featured-datasets {
@@ -9882,4 +9954,19 @@
                                                             background-color: #019544;
                                                             border-radius: 50px;
                                                             color: white;
+                                                        }
+                                                        
+                                                        .position-relative {
+                                                            position: relative;
+                                                        }
+                                                        
+                                                        .whiteaster-redirect {
+                                                            margin-right: 10px;
+                                                            margin-left: 10px;
+                                                            margin-bottom: 10px;
+                                                        }
+                                                        
+                                                        .btn-mainpage {
+                                                            color: #019544;
+                                                            width: 203px;
                                                         }

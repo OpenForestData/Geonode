@@ -71,49 +71,49 @@
             <div class="row home-facets flex">
             {% with facet_type='home' %}
              {% facets as facets %}
-              <div class="">
+              <div class="position-relative">
 								<div class="flex-row-center">
 									<p class="margin-10"><a href="{% url "layer_browse" %}"><img src="../static/geonode/img/layers.svg"/></a></p>
-									<h2 style="font-size: 24px;"><a href="{% url "layer_browse" %}">{{ facets.layer|default:_("No") }} {% blocktrans count counter=facets.layer %}Layer{% plural %}Layers{% endblocktrans %}</a></h2>
+									<h2 style="font-size: 24px;"><a style="color: black;" href="{% url "layer_browse" %}">{{ facets.layer|default:_("No") }} {% blocktrans count counter=facets.layer %}Layer{% plural %}Layers{% endblocktrans %}</a></h2>
 								</div>
                 <p>{% trans "Click to search for geospatial data published by other users, organizations and public sources. Download data in standard formats." %}</p>
                 {% if user.is_authenticated %}
-                <p class="text-center flex-center"><a class="btn btn-default btn-layers" href="{% url "layer_upload" %}" role="button">Zobacz&raquo;</a></p>
+                <p class="text-center flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "layer_upload" %}" role="button">Zobacz&raquo;</a></p>
                 {% else %}
-                <p class="text-center flex-center"><a class="btn btn-default btn-layers" href="{% url "layer_browse" %}" role="button">Zobacz&raquo;</a></p>
+                <p class="text-center flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "layer_browse" %}" role="button">Zobacz&raquo;</a></p>
                 {% endif %}
               </div>
-              <div class="">
+              <div class="position-relative">
 								<div class="flex-row-center">
 									<p class="margin-10"><a href="{% url "maps_browse" %}"><img src="../static/geonode/img/dataset.svg"/></a></p>
-									<h2 style="font-size: 24px;"><a href="{% url "maps_browse" %}">{{ facets.map|default:_("No") }} {% blocktrans count counter=facets.map %}Map{% plural %}Maps{% endblocktrans %}</a></h2>
+									<h2 style="font-size: 24px;"><a style="color: black;" href="{% url "maps_browse" %}">{{ facets.map|default:_("No") }} {% blocktrans count counter=facets.map %}Map{% plural %}Maps{% endblocktrans %}</a></h2>
 								</div>
                 <p>{% trans "Data is available for browsing, aggregating and styling to generate maps which can be saved, downloaded, shared publicly or restricted to specify users only." %}</p>
                 {% if user.is_authenticated %}
-                <p class="flex-center"><a class="btn btn-default btn-layers" href="{% url "new_map" %}" role="button">Zobacz&raquo;</a></p>
+                <p class="flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "new_map" %}" role="button">Zobacz&raquo;</a></p>
                 {% else %}
-                <p class="flex-center"><a class="btn btn-default btn-layers" href="{% url "maps_browse" %}" role="button">Zobacz&raquo;</a></p>
+                <p class="flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "maps_browse" %}" role="button">Zobacz&raquo;</a></p>
                 {% endif %}
               </div>
-              <div class="">
+              <div class="position-relative">
 								<div class="flex-row-center">
 									<p class="margin-10"><a href="{% url "document_browse" %}"><img src="../static/geonode/img/document.svg"/></a></p>
-									<h2 style="font-size: 24px;"><a href="{% url "document_browse" %}">{{ facets.document|default:_("No") }} {% blocktrans count counter=facets.document %}Document{% plural %}Documents{% endblocktrans %}</a></h2>
+									<h2 style="font-size: 24px;"><a style="color: black;" href="{% url "document_browse" %}">{{ facets.document|default:_("No") }} {% blocktrans count counter=facets.document %}Document{% plural %}Documents{% endblocktrans %}</a></h2>
 								</div>
                 <p>{% trans "As for the layers and maps GeoNode allows to publish tabular and text data, manage theirs metadata and associated documents." %}</p>
                 {% if user.is_authenticated %}
-                <p class="text-center flex-center"><a class="btn btn-default btn-layers" href="{% url "document_browse" %}" role="button">Zobacz&raquo;</a></p>
+                <p class="text-center flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "document_browse" %}" role="button">Zobacz&raquo;</a></p>
                 {% else %}
-                <p class="text-center flex-center"><a class="btn btn-default btn-layers" href="{% url "document_browse" %}" role="button">Zobacz&raquo;</a></p>
+                <p class="text-center flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "document_browse" %}" role="button">Zobacz&raquo;</a></p>
                 {% endif %}
               </div>
-              <div class="">
+              <div class="position-relative">
 								<div class="flex-row-center">
 									<p class="margin-10"><a href="{% url "profile_browse" %}"><img src="../static/geonode/img/profile.svg"/></a></p>
-									<h2 style="font-size: 24px;"><a href="{% url "profile_browse" %}">{{ facets.user|default:_("No") }} {% blocktrans count counter=facets.user %}User{% plural %}Users{% endblocktrans %}</a></h2>
+									<h2 style="font-size: 24px;"><a style="color: black;" href="{% url "profile_browse" %}">{{ facets.user|default:_("No") }} {% blocktrans count counter=facets.user %}User{% plural %}Users{% endblocktrans %}</a></h2>
 								</div>
                 <p>{% trans "Geonode allows registered users to easily upload geospatial data and various documents in several formats." %}</p>
-                <p class="flex-center"><a class="btn btn-default btn-layers" href="{% url "profile_browse" %}" role="button">Zobacz&raquo;</a></p>
+                <p class="flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "profile_browse" %}" role="button">Zobacz&raquo;</a></p>
               </div>
             {% endwith %}
             </div>
@@ -123,48 +123,35 @@
 	  {% endblock showcase %}
 
 		{% block featured_datasets %}
-			<section id="featured_datasets" class="featured-datasets">
+			<section id="featured_datasets" class="featured-datasets" ng-app="featured" ng-if="featured.length > 0" ng-cloak>
 				<div id="headerDataset" class="flex container center-title">
 					<img class="heart" src="../static/geonode/img/heart.svg"/>
 					<p style="font-size: 24px;">Wyróżnione zbiory danych</p>
 				</div>
-				<div id="bodyDataset" class="flex container shrink-to-column">
-					<div>
-						<img class="white-border" src="../static/geonode/img/example-dataset.png"/>
-						<p class="dataset-text">Natural Earth II with Shaded Relief, Water, and Drainages</p>
+				{% comment %} <div ng-app="featured" ng-if="featured.length > 0" ng-cloak class="row"> {% endcomment %}
+				<div>
+					<div class="container text-center">
+						{% comment %} <h2>{% trans "Featured Datasets" %}</h2> {% endcomment %}
+						<div class="row">
+							{% verbatim %}
+							<div ng-repeat="item in featured" class="col-xs-6 col-sm-6 col-md-3">
+								<a href="{{ item.detail_url }}"><img class="white-border" ng-src="{{ item.thumbnail_url }}"/></a>
+								<h4>{{ item.title | limitTo: 20 }}{{item.title.length > 20 ? '...' : ''}}</h4>
+							</div>
+							{% endverbatim %}
+						</div>
 					</div>
-					<div>
-						<img class="white-border" src="../static/geonode/img/example-dataset.png"/>
-						<p class="dataset-text">Natural Earth II with Shaded Relief, Water, and Drainages</p>
-					</div>
-					<div>
-						<img class="white-border" src="../static/geonode/img/example-dataset.png"/>
-						<p class="dataset-text">Natural Earth II with Shaded Relief, Water, and Drainages</p>
-					</div>
-					<div>
-						<img class="white-border" src="../static/geonode/img/example-dataset.png"/>
-						<p class="dataset-text">Natural Earth II with Shaded Relief, Water, and Drainages</p>
-					</div>
-				</div>
-
-				<div ng-app="featured" ng-if="featured.length > 0" ng-cloak class="row">
-			 	<div class="container text-center">
-			 		<h2>{% trans "Featured Datasets" %}</h2>
-			 		<div class="row">
-			 			{% verbatim %}
-			 			<div ng-repeat="item in featured" class="col-xs-6 col-sm-6 col-md-3">
-			 				<a href="{{ item.detail_url }}"><img ng-src="{{ item.thumbnail_url }}" style="width: 100%" /></a>
-			 				<h4>{{ item.title | limitTo: 20 }}{{item.title.length > 20 ? '...' : ''}}</h4>
-			 			</div>
-			 			{% endverbatim %}
-			 		</div>
-			 	</div>
 				</div>
 			</section>
 		{% endblock featured_datasets %}
 
 		{% block available_datasets %}
-			<section id="available_datasets" class="available-datasets flex">
+			<section id="available_datasets" class="available-datasets flex-column">
+                <div class="flex container center-title">
+                    <img class="heart" src="../static/geonode/img/search.svg"/>
+					<p style="font-size: 24px;">Wyróżnione zbiory danych</p>
+                </div>
+
 				<div class="container">
 					<div class="featured-datasets-redirection">
 						<a style="width: 20%;" href="{% url "search" %}?limit=100&offset=0&category__identifier__in=biota">
@@ -255,8 +242,11 @@
 							<h6 class="h6-black">{% trans "Elevation" %}</h6>
 						</a>
 					</div>
-
 				</div>
+
+                <div class="flex-center" style="padding: 40px 0 20px 0;">
+                    <a class="btn btn-default btn-layers btn-mainpage" href="{% url "search" %}?limit=100&offset=0" role="button">Wszystkie dane&raquo;</a>
+                </div>
 			</section>
 		{% endblock available_datasets %}
 

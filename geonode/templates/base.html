@@ -545,11 +545,13 @@
 
         <div class="col-md-6 flex-column">
           <div class="flex-justify-end">
-            <img class="footer-politechnika" src="../static/geonode/img/logo_politechnika_bialostocka.png"/>
-            <img class="footer-whiteaster" src="../static/geonode/img/whiteaster_logo.png"/>
+            <img class="footer-politechnika" src="{% static 'geonode/img/logo_politechnika_bialostocka.png' %}"/>
+            <a href="https://whiteaster.com/" class="whiteaster-redirect">
+              <img class="footer-whiteaster" src="{% static 'geonode/img/whiteaster_logo.png' %}"/>
+            </a>
           </div>
           <div class="flex-justify-end">
-            <img src="../static/geonode/img/footer-puszcza.png"/>
+            <img src="{% static 'geonode/img/footer-puszcza.png' %}"/>
           </div>
         </div>
       </div>
@@ -557,11 +559,11 @@
       <div class="flex-space-between">
         <div class="flex">
             <p class="flex-center">{% trans "Powered by" %}</p>
-            <img class="geonode-logo" src="../static/geonode/img/geonode_logo.png"/>
+            <img class="geonode-logo" src="{% static 'geonode/img/geonode_logo.png' %}"/>
         </div>
 
         <div class="flex-justify-end">
-          <img class="shrink-eu" src="../static/geonode/img/funduszeunijne.png"/>
+          <img class="shrink-eu" src="{% static 'geonode/img/funduszeunijne.png' %}"/>
         </div>
       </div>
     </div>

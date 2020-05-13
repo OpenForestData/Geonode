@@ -17,10 +17,10 @@
   <div class="jumbotron">
   	<div class="container flex-column-center">
 			<div class="flex-row-center">
-				<p style="color: #019544; font-size: 30px;">Podlaskie&nbsp;</p>
-				<p style="font-size: 30px;">cyfrowe repozytorium</p>
+				<p class="header-phone" style="color: #019544;">Podlaskie&nbsp;</p>
+				<p class="header-phone">cyfrowe repozytorium</p>
 			</div>
-			<p style="font-size: 30px;">przyrodniczych nauk naukowych.</p>
+			<p class="header-phone">przyrodniczych nauk naukowych.</p>
         {% comment %} <h1>{{custom_theme.jumbotron_welcome_title|default:_("Welcome")}}</h1> {% endcomment %}
 		{% comment %} <p>{{custom_theme.jumbotron_welcome_content|default:_("Podlaskie cyfrowe repozytorium przyrodniczych danych naukowych.")}}</p> {% endcomment %}
 		{% comment %} {% if not custom_theme.jumbotron_cta_hide %}
@@ -43,8 +43,8 @@
       	<div class="container">
       		<h1>{% trans "Search for Data." %}</h1>
       		<div class="search">
-      			<form id="main_search" action="{% url "search" %}" >
-      				<span class="fa fa-search fa-3x"></span>
+      			<form id="main_search" action="{% url "search" %}">
+      				<span class="fa fa-search fa-2x search-icon"></span>
       				{% if HAYSTACK_SEARCH %}
       				<input id="main_search_input" type="text" placeholder="{% trans 'Search' %}" class="form-control" name="q" autocomplete="off">
                     <input type="hidden" name="abstract__icontains" id="main_search_abstract_input" placeholder="Search" >
@@ -78,9 +78,9 @@
 								</div>
                 <p>{% trans "Click to search for geospatial data published by other users, organizations and public sources. Download data in standard formats." %}</p>
                 {% if user.is_authenticated %}
-                <p class="text-center flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "layer_upload" %}" role="button">Zobacz&raquo;</a></p>
+                <p class="text-center flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "layer_upload" %}" role="button">Zobacz   <img src="{% static 'geonode/img/arrow-right.svg' %}"/></a></p>
                 {% else %}
-                <p class="text-center flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "layer_browse" %}" role="button">Zobacz&raquo;</a></p>
+                <p class="text-center flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "layer_browse" %}" role="button">Zobacz   <img src="{% static 'geonode/img/arrow-right.svg' %}"/></a></p>
                 {% endif %}
               </div>
               <div class="position-relative">
@@ -90,9 +90,9 @@
 								</div>
                 <p>{% trans "Data is available for browsing, aggregating and styling to generate maps which can be saved, downloaded, shared publicly or restricted to specify users only." %}</p>
                 {% if user.is_authenticated %}
-                <p class="flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "new_map" %}" role="button">Zobacz&raquo;</a></p>
+                <p class="flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "new_map" %}" role="button">Zobacz   <img src="{% static 'geonode/img/arrow-right.svg' %}"/></a></p>
                 {% else %}
-                <p class="flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "maps_browse" %}" role="button">Zobacz&raquo;</a></p>
+                <p class="flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "maps_browse" %}" role="button">Zobacz   <img src="{% static 'geonode/img/arrow-right.svg' %}"/></a></p>
                 {% endif %}
               </div>
               <div class="position-relative">
@@ -102,9 +102,9 @@
 								</div>
                 <p>{% trans "As for the layers and maps GeoNode allows to publish tabular and text data, manage theirs metadata and associated documents." %}</p>
                 {% if user.is_authenticated %}
-                <p class="text-center flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "document_browse" %}" role="button">Zobacz&raquo;</a></p>
+                <p class="text-center flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "document_browse" %}" role="button">Zobacz   <img src="{% static 'geonode/img/arrow-right.svg' %}"/></a></p>
                 {% else %}
-                <p class="text-center flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "document_browse" %}" role="button">Zobacz&raquo;</a></p>
+                <p class="text-center flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "document_browse" %}" role="button">Zobacz   <img src="{% static 'geonode/img/arrow-right.svg' %}"/></a></p>
                 {% endif %}
               </div>
               <div class="position-relative">
@@ -113,7 +113,7 @@
 									<h2 style="font-size: 24px;"><a style="color: black;" href="{% url "profile_browse" %}">{{ facets.user|default:_("No") }} {% blocktrans count counter=facets.user %}User{% plural %}Users{% endblocktrans %}</a></h2>
 								</div>
                 <p>{% trans "Geonode allows registered users to easily upload geospatial data and various documents in several formats." %}</p>
-                <p class="flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "profile_browse" %}" role="button">Zobacz&raquo;</a></p>
+                <p class="flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "profile_browse" %}" role="button">Zobacz   <img src="{% static 'geonode/img/arrow-right.svg' %}"/></a></p>
               </div>
             {% endwith %}
             </div>
@@ -243,14 +243,11 @@
 						</a>
 					</div>
 				</div>
-
-                <div class="flex-center" style="padding: 40px 0 20px 0;">
-                    <a class="btn btn-default btn-layers btn-mainpage" href="{% url "search" %}?limit=100&offset=0" role="button">Wszystkie dane&raquo;</a>
-                </div>
+          <div class="flex-center" style="padding: 40px 0 20px 0;">
+          	<a class="btn btn-default btn-layers btn-mainpage" style="padding-left: 15px;" href="{% url "search" %}?limit=100&offset=0" role="button">Wszystkie dane   <img src="{% static 'geonode/img/arrow-right.svg' %}"/></a>
+          </div>
 			</section>
 		{% endblock available_datasets %}
-
-		
 
       {% comment %} {% block datasets %}
       <section id="datasets">

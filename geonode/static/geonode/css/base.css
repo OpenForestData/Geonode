@@ -2064,6 +2064,14 @@
                                                                 margin-left: auto;
                                                                 margin-right: auto;
                                                             }
+                                                            .featured-datasets-redirection {
+                                                                display: flex;
+                                                                flex-direction: row;
+                                                                margin-left: 10px;
+                                                            }
+                                                            .header-phone {
+                                                                font-size: 30px !important;
+                                                            }
                                                         }
                                                         
                                                         @media (min-width: 1200px) {
@@ -5094,7 +5102,7 @@
                                                             justify-content: center;
                                                             align-items: center;
                                                             position: relative;
-                                                            min-height: 108px;
+                                                            min-height: 70px;
                                                             margin-bottom: 22px;
                                                             border: 1px solid transparent;
                                                         }
@@ -7254,6 +7262,9 @@
                                                             .modal-lg {
                                                                 width: 900px;
                                                             }
+                                                            .shrink-ofd {
+                                                                width: auto;
+                                                            }
                                                         }
                                                         
                                                         .tooltip {
@@ -8398,7 +8409,6 @@
                                                             color: black;
                                                             margin-bottom: 0;
                                                             padding: 7.5em 0 3.75em;
-                                                            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
                                                         }
                                                         
                                                         .home .jumbotron a {
@@ -8456,7 +8466,7 @@
                                                         
                                                         .home .big-search .search input {
                                                             width: 100%;
-                                                            min-width: 125%;
+                                                            min-width: 100%;
                                                             height: 56px;
                                                             border: 2px solid #019544;
                                                             border-radius: 50px;
@@ -8470,15 +8480,15 @@
                                                         
                                                         .home .big-search .search .fa-search {
                                                             position: absolute;
-                                                            left: 10px;
-                                                            top: 3px;
+                                                            left: 19px;
+                                                            top: 11px;
                                                         }
                                                         
                                                         .home .big-search .btn-default {
                                                             background: transparent;
                                                             border: none;
                                                             color: #2A2B2C;
-                                                            margin-left: 60%;
+                                                            margin-left: 37%;
                                                         }
                                                         
                                                         .home .big-search .btn-default:hover {
@@ -8577,7 +8587,6 @@
                                                             background: white;
                                                             color: white;
                                                             padding: 40px 0 60px;
-                                                            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
                                                             margin-top: -10px;
                                                         }
                                                         
@@ -9529,7 +9538,7 @@
                                                             .home .navbar-inverse {
                                                                 background-color: white !important;
                                                                 border-bottom: solid 10px #F6F4F2;
-                                                                width: 100%;
+                                                                position: absolute;
                                                             }
                                                             .navbar-inverse .navbar-nav>li>a {
                                                                 padding-bottom: 0.75em;
@@ -9548,10 +9557,54 @@
                                                                 color: #444;
                                                                 top: 20px;
                                                                 padding-bottom: 2em;
-                                                                width: 110%;
+                                                                width: 90%;
                                                             }
                                                             .shrink-eu {
-                                                                width: 350px;
+                                                                width: 270px;
+                                                            }
+                                                            footer::after {
+                                                                display: none;
+                                                                position: absolute;
+                                                                background-image: url('../img/tree_footer.svg');
+                                                                background-repeat: no-repeat;
+                                                                content: "";
+                                                                transform: scale(-1);
+                                                                height: 120px;
+                                                                width: 159px;
+                                                                top: -120px;
+                                                                z-index: 20;
+                                                            }
+                                                            .flex-space-between {
+                                                                display: flex;
+                                                                flex-direction: column;
+                                                                justify-content: space-between;
+                                                            }
+                                                            .shrink-ofd {
+                                                                width: 270px;
+                                                            }
+                                                            .home .big-search .search input {
+                                                                width: 100%;
+                                                                min-width: auto;
+                                                                height: 56px;
+                                                                border: 2px solid #019544;
+                                                                border-radius: 50px;
+                                                                outline-width: 0;
+                                                                font-size: 1.5em;
+                                                            }
+                                                            .home .big-search .btn-default {
+                                                                background: transparent;
+                                                                border: none;
+                                                                color: #2A2B2C;
+                                                                margin-left: auto;
+                                                            }
+                                                            .featured-datasets-redirection {
+                                                                display: inherit;
+                                                                flex-direction: row;
+                                                                margin-left: 10px;
+                                                                text-align: center;
+                                                            }
+                                                            .header-phone {
+                                                                font-size: 18px !important;
                                                             }
                                                         }
                                                         
@@ -9829,6 +9882,7 @@
                                                         
                                                         .main-page-button {
                                                             color: #019544;
+                                                            white-space: pre;
                                                         }
                                                         
                                                         .btn-layers {
@@ -9935,12 +9989,6 @@
                                                             color: black;
                                                         }
                                                         
-                                                        .featured-datasets-redirection {
-                                                            display: flex;
-                                                            flex-direction: row;
-                                                            margin-left: 10px;
-                                                        }
-                                                        
                                                         .cart-border {
                                                             border: 1px solid #F6F4F2;
                                                         }
@@ -9969,4 +10017,6 @@
                                                         .btn-mainpage {
                                                             color: #019544;
                                                             width: 203px;
+                                                            white-space: pre;
+                                                            padding-left: 45px;
                                                         }

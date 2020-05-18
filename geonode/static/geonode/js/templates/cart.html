@@ -11,7 +11,7 @@
     <li class="list-group-item clearfix" ng-if="resource && resource.title" ng-repeat="resource in cart.getCart().items">
       <p>{{ resource.title | limitTo: 25}}{{ resource.title.length > 25 ? '...' : '' }}</p>
       <button class="btn btn-default btn-xs pull-right" ng-click="cart.removeItem(resource)">
-        <img src="../../img/x.svg"/>
+        <img src="{% static 'geonode/img/x.svg' %}"/>
       </button>
     </li>
   </ul>

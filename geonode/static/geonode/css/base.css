@@ -3847,24 +3847,24 @@
                                                         
                                                         .btn-default:focus,
                                                         .btn-default.focus {
-                                                            color: #333;
-                                                            background-color: #e6e6e6;
-                                                            border-color: #8c8c8c;
+                                                            color: white;
+                                                            background-color: #019544;
+                                                            border-color: #019544;
                                                         }
                                                         
                                                         .btn-default:hover {
-                                                            color: #333;
-                                                            background-color: #e6e6e6;
-                                                            border-color: #adadad;
+                                                            color: white;
+                                                            background-color: #019544;
+                                                            border-color: #019544;
                                                         }
                                                         
                                                         .btn-default:active,
                                                         .btn-default.active,
                                                         .open>.dropdown-toggle.btn-default {
-                                                            color: #333;
-                                                            background-color: #e6e6e6;
+                                                            color: white;
+                                                            background-color: #019544;
                                                             background-image: none;
-                                                            border-color: #adadad;
+                                                            border-color: #019544;
                                                         }
                                                         
                                                         .btn-default:active:hover,
@@ -8615,7 +8615,7 @@
                                                         }
                                                         
                                                         .home-facets a:hover {
-                                                            color: #019544;
+                                                            color: white;
                                                             text-decoration: none;
                                                         }
                                                         
@@ -10025,4 +10025,17 @@
                                                             width: 203px;
                                                             white-space: pre;
                                                             padding-left: 45px;
+                                                        }
+                                                        
+                                                        .arrow-white-green {
+                                                            width: 16px;
+                                                            height: 10px;
+                                                            background-image: url('../img/arrow-right.svg');
+                                                        }
+                                                        
+                                                        .arrow-white-green::after {
+                                                            content: '';
+                                                            width: 16px;
+                                                            height: 10px;
+                                                            background-image: url('../img/arrow-right-white.png');
                                                         }

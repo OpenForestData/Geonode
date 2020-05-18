@@ -78,9 +78,10 @@
 								</div>
                 <p>{% trans "Click to search for geospatial data published by other users, organizations and public sources. Download data in standard formats." %}</p>
                 {% if user.is_authenticated %}
-                <p class="text-center flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "layer_upload" %}" role="button">Zobacz   <img src="{% static 'geonode/img/arrow-right.svg' %}"/></a></p>
+                {% comment %} <p class="text-center flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "layer_upload" %}" role="button">Zobacz   <span class="arrow-white-green"></a></p> {% endcomment %}
+                <p class="text-center flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "layer_upload" %}" role="button">Zobacz   <span class="arrow-white-green"></span></a></p>
                 {% else %}
-                <p class="text-center flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "layer_browse" %}" role="button">Zobacz   <img src="{% static 'geonode/img/arrow-right.svg' %}"/></a></p>
+                <p class="text-center flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "layer_browse" %}" role="button">Zobacz   <span class="arrow-white-green"></a></p>
                 {% endif %}
               </div>
               <div class="position-relative">
@@ -90,9 +91,9 @@
 								</div>
                 <p>{% trans "Data is available for browsing, aggregating and styling to generate maps which can be saved, downloaded, shared publicly or restricted to specify users only." %}</p>
                 {% if user.is_authenticated %}
-                <p class="flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "new_map" %}" role="button">Zobacz   <img src="{% static 'geonode/img/arrow-right.svg' %}"/></a></p>
+                <p class="flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "new_map" %}" role="button">Zobacz   <span class="arrow-white-green"></a></p>
                 {% else %}
-                <p class="flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "maps_browse" %}" role="button">Zobacz   <img src="{% static 'geonode/img/arrow-right.svg' %}"/></a></p>
+                <p class="flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "maps_browse" %}" role="button">Zobacz   <span class="arrow-white-green"></a></p>
                 {% endif %}
               </div>
               <div class="position-relative">
@@ -102,9 +103,9 @@
 								</div>
                 <p>{% trans "As for the layers and maps GeoNode allows to publish tabular and text data, manage theirs metadata and associated documents." %}</p>
                 {% if user.is_authenticated %}
-                <p class="text-center flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "document_browse" %}" role="button">Zobacz   <img src="{% static 'geonode/img/arrow-right.svg' %}"/></a></p>
+                <p class="text-center flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "document_browse" %}" role="button">Zobacz   <span class="arrow-white-green"></a></p>
                 {% else %}
-                <p class="text-center flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "document_browse" %}" role="button">Zobacz   <img src="{% static 'geonode/img/arrow-right.svg' %}"/></a></p>
+                <p class="text-center flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "document_browse" %}" role="button">Zobacz   <span class="arrow-white-green"></a></p>
                 {% endif %}
               </div>
               <div class="position-relative">
@@ -113,7 +114,7 @@
 									<h2 style="font-size: 24px;"><a style="color: black;" href="{% url "profile_browse" %}">{{ facets.user|default:_("No") }} {% blocktrans count counter=facets.user %}User{% plural %}Users{% endblocktrans %}</a></h2>
 								</div>
                 <p>{% trans "Geonode allows registered users to easily upload geospatial data and various documents in several formats." %}</p>
-                <p class="flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "profile_browse" %}" role="button">Zobacz   <img src="{% static 'geonode/img/arrow-right.svg' %}"/></a></p>
+                <p class="flex-center equal-height-buttons"><a class="btn btn-default btn-layers btn-mainpage" href="{% url "profile_browse" %}" role="button">Zobacz   <span class="arrow-white-green"></a></p>
               </div>
             {% endwith %}
             </div>
@@ -244,7 +245,7 @@
 					</div>
 				</div>
           <div class="flex-center" style="padding: 40px 0 20px 0;">
-          	<a class="btn btn-default btn-layers btn-mainpage" style="padding-left: 15px;" href="{% url "search" %}?limit=100&offset=0" role="button">Wszystkie dane   <img src="{% static 'geonode/img/arrow-right.svg' %}"/></a>
+          	<a class="btn btn-default btn-layers btn-mainpage" style="padding-left: 15px;" href="{% url "search" %}?limit=100&offset=0" role="button">Wszystkie dane   <span class="arrow-white-green"></a>
           </div>
 			</section>
 		{% endblock available_datasets %}

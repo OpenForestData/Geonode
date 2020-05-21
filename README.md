@@ -1,6 +1,6 @@
 # Geonode
 
-- [installation](#installation)
+- [Installation](#installation)
 
 ## Installation for docker
 

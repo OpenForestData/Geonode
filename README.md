@@ -1,6 +1,6 @@
-    # Geonode
+# Geonode
     
-    - [Installation](#installation)
+- [Installation](#installation)
     
     ## Installation for docker
     
@@ -8,5 +8,6 @@
     2. Clone this repository it will create directory with name geonode.
     3. Copy files from geonode/geonode into your geonode/genode directory.
     4. Restart  docker with command  
-    ```bash
-    docker-compose -f docker-compose.yml up -d --build```
+        ```bash
+        docker-compose -f docker-compose.yml up -d --build
+        ```
